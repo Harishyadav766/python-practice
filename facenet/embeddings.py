@@ -16,7 +16,7 @@ def get_embedding(model, face_pixels):
 	face_pixels = (face_pixels - mean) / std
 	# transform face into one sample
 	samples = expand_dims(face_pixels, axis=0)
-	print("samples:",samples)
+	# print("samples:",samples)
 	# make prediction to get embedding
 	yhat = model.predict(samples)
 	print("yhat is :", yhat)
